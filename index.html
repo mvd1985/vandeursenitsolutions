@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<link rel="stylesheet" href="./style.css">
+<script>
+  // Cachebuster: current time as version, so the latest CSS/JS is always fetched
+  var v = Date.now();
+  document.write('<script src="./support.js?v=' + v + '"><\/script>');
+  document.write('<link rel="stylesheet" href="./style.css?v=' + v + '">');
+</script>
 </head>
 <body>
 <x-dc>
