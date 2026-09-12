@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#0e1420">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#141a2b"/>
+    <circle cx="600" cy="400" r="120" fill="none" stroke="#6fb7e6" stroke-width="14"/>
+    <rect x="520" y="360" width="160" height="80" rx="12" fill="#6fb7e6"/>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: oklch(14% 0.015 260); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+  a { color: oklch(75% 0.16 220); text-decoration: none; }
+  a:hover { color: oklch(85% 0.16 220); }
+  @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:0.9; } }
+  @keyframes drift { 0% { background-position: 0 0; } 100% { background-position: 200px 200px; } }
+</style>
+</helmet>
+
+<div style="display:flex; flex-direction:column; min-height:100vh; color:oklch(94% 0.005 260); position:relative; overflow-x:hidden; background:
+  radial-gradient(circle at 15% 0%, oklch(30% 0.08 250 / 0.5), transparent 45%),
+  radial-gradient(circle at 90% 20%, oklch(45% 0.14 200 / 0.25), transparent 40%),
+  oklch(14% 0.015 260);">
+
+  <div style="position:absolute; inset:0; background-image:linear-gradient(oklch(100% 0 0 / 0.1) 1px, transparent 1px), linear-gradient(90deg, oklch(100% 0 0 / 0.1) 1px, transparent 1px); background-size:64px 64px; pointer-events:none; mask-image:linear-gradient(to bottom, black, transparent 70%); animation:drift 24s linear infinite;"></div>
+
+  <header style="position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:14px clamp(16px,4vw,64px); gap:16px; flex-wrap:wrap; background:oklch(14% 0.015 260 / 0.7); backdrop-filter:blur(14px); border-bottom:1px solid oklch(100% 0 0 / 0.08);">
+    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" style="height:clamp(34px,7vw,52px); width:auto; display:block;" />
+    <nav style="display:flex; align-items:center; flex-wrap:wrap; gap:clamp(14px,3vw,36px);">
+      <a href="#services" style="font-size:15px; font-weight:500; color:oklch(94% 0.005 260);" style-hover="color:oklch(78% 0.16 220);">Services</a>
+      <a href="#why-us" style="font-size:15px; font-weight:500; color:oklch(94% 0.005 260);" style-hover="color:oklch(78% 0.16 220);">Why Us</a>
+      <a href="#contact" style="display:inline-flex; align-items:center; padding:10px 24px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:15px; font-weight:600; box-shadow:0 0 24px oklch(78% 0.16 220 / 0.5);" style-hover="box-shadow:0 0 36px oklch(78% 0.16 220 / 0.75);">Get in touch</a>
+    </nav>
+  </header>
+
+  <section style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px; padding:clamp(72px,12vw,140px) clamp(20px,5vw,24px) clamp(64px,10vw,120px); max-width:880px; margin:0 auto; position:relative; z-index:1;">
+    <div ref="{{ heroRef }}" style="{{ heroStyle }}">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:26px;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); padding:8px 16px; border:1px solid oklch(78% 0.16 220 / 0.35); border-radius:100px; background:oklch(78% 0.16 220 / 0.08);">// IT solutions, engineered for scale</span>
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(32px,6.4vw,62px); line-height:1.08; font-weight:700; margin:0; letter-spacing:-0.01em; background:linear-gradient(180deg, oklch(98% 0.005 260), oklch(75% 0.02 260)); -webkit-background-clip:text; background-clip:text; color:transparent;">Software and systems built to run your business, not slow it down.</h1>
+        <p style="font-size:clamp(16px,2.1vw,19px); line-height:1.6; color:oklch(72% 0.01 260); margin:0; max-width:620px;">We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.</p>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:8px;">
+          <a href="#contact" style="display:inline-flex; align-items:center; padding:15px 30px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:16px; font-weight:600; box-shadow:0 0 30px oklch(78% 0.16 220 / 0.5);" style-hover="box-shadow:0 0 44px oklch(78% 0.16 220 / 0.8);">Start a project</a>
+          <a href="#services" style="display:inline-flex; align-items:center; padding:15px 30px; border-radius:8px; background:oklch(20% 0.02 260); border:1px solid oklch(100% 0 0 / 0.12); color:oklch(94% 0.005 260); font-size:16px; font-weight:600;" style-hover="border-color:oklch(78% 0.16 220); color:oklch(78% 0.16 220);">See what we do</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding:clamp(56px,9vw,90px) clamp(20px,5vw,64px) clamp(64px,10vw,110px); position:relative; z-index:1;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div ref="{{ servicesHeaderRef }}" style="{{ servicesHeaderStyle }}">
+        <span style="display:block; text-align:center; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); margin-bottom:14px;">Capabilities</span>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,4.6vw,36px); font-weight:700; margin:0 0 clamp(34px,6vw,56px); text-align:center;">What we do</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:clamp(16px,2.4vw,24px); align-items:stretch; max-width:860px; margin:0 auto;">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+          <div ref="{{ svc.ref }}" style="{{ svc.style }}">
+            <div style="height:100%; box-sizing:border-box; background:oklch(20% 0.02 260 / 0.6); backdrop-filter:blur(6px); border-radius:16px; padding:clamp(22px,4vw,32px); display:flex; flex-direction:column; gap:16px; border:1px solid oklch(100% 0 0 / 0.1); transition:border-color 0.2s;" style-hover="border-color:oklch(78% 0.16 220 / 0.6);">
+              <div style="width:44px; height:44px; border-radius:10px; background:oklch(78% 0.16 220 / 0.15); border:1px solid oklch(78% 0.16 220 / 0.4); display:flex; align-items:center; justify-content:center;">
+                <div style="width:14px; height:14px; border-radius:3px; background:oklch(78% 0.16 220); box-shadow:0 0 12px oklch(78% 0.16 220 / 0.8);"></div>
+              </div>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; margin:0;">{{ svc.title }}</h3>
+              <p style="font-size:15px; line-height:1.6; color:oklch(70% 0.01 260); margin:0;">{{ svc.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" style="padding:clamp(64px,10vw,110px) clamp(20px,5vw,64px); max-width:1160px; margin:0 auto; width:100%; box-sizing:border-box; position:relative; z-index:1;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(36px,6vw,80px); align-items:start;">
+      <div ref="{{ whyLeftRef }}" style="{{ whyLeftStyle }}">
+        <span style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); margin-bottom:14px;">Why us</span>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,4.6vw,36px); font-weight:700; margin:0 0 16px;">Built for how small businesses operate.</h2>
+        <p style="font-size:17px; line-height:1.7; color:oklch(70% 0.01 260); margin:0;">No bloated enterprise contracts, no black-box vendors. We work directly with your team to build software you actually own, and stay on to support it as your business grows.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(18px,3vw,28px);">
+        <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
+          <div ref="{{ s.ref }}" style="{{ s.style }}">
+            <div style="display:flex; gap:18px; align-items:flex-start; padding:20px; border-radius:12px; border:1px solid oklch(100% 0 0 / 0.08); background:oklch(20% 0.02 260 / 0.4);">
+              <div style="min-width:8px; height:8px; margin-top:8px; border-radius:50%; background:oklch(78% 0.16 220); box-shadow:0 0 10px oklch(78% 0.16 220 / 0.9); animation:pulse 2.4s ease-in-out infinite;"></div>
+              <div>
+                <h4 style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; margin:0 0 4px;">{{ s.title }}</h4>
+                <p style="font-size:15px; line-height:1.6; color:oklch(70% 0.01 260); margin:0;">{{ s.desc }}</p>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:linear-gradient(180deg, oklch(20% 0.03 250), oklch(15% 0.02 260)); border-top:1px solid oklch(100% 0 0 / 0.08); padding:clamp(64px,10vw,100px) clamp(20px,5vw,64px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; position:relative; z-index:1;">
+    <div ref="{{ contactRef }}" style="{{ contactStyle }}">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,5vw,38px); font-weight:700; margin:0;">Ready to modernize your IT?</h2>
+        <p style="font-size:17px; color:oklch(75% 0.01 260); margin:0; max-width:520px;">Tell us what you're working on and we'll get back to you with next steps.</p>
+        <a href="mailto:hello@vandeursenit.com" style="margin-top:8px; display:inline-flex; align-items:center; padding:15px 34px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:16px; font-weight:600; box-shadow:0 0 34px oklch(78% 0.16 220 / 0.55);" style-hover="box-shadow:0 0 48px oklch(78% 0.16 220 / 0.85);">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(24px,5vw,36px) clamp(20px,5vw,64px); display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; border-top:1px solid oklch(100% 0 0 / 0.08); position:relative; z-index:1;">
+    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" style="height:32px; width:auto; display:block; opacity:0.85;" />
+    <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:oklch(60% 0.01 260);">© 2026 Van Deursen IT Solutions</span>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const RAW_SERVICES = [
+  { title: "Custom Software", desc: "Bespoke applications designed and built around your specific workflows." },
+  { title: "Web Applications & Websites", desc: "From marketing sites to full web apps, built to load fast and scale." },
+  { title: "Business Process Automation", desc: "We identify manual, repetitive work and automate it end to end." },
+  { title: "IT Consulting & Support", desc: "Practical advice on architecture, tooling, and technology decisions, plus ongoing upkeep, monitoring, and fixes so systems keep running." }
+];
+const RAW_STRENGTHS = [
+  { title: "Direct access to the people building your software", desc: "No account managers relaying messages, you talk to the engineers." },
+  { title: "Solutions sized to your business", desc: "We scope for what you need now, and design so it can grow later." },
+  { title: "Support that doesn't end at launch", desc: "We stay on to maintain, monitor, and improve what we build." }
+];
+
+class Component extends DCLogic {
+  state = { visible: {} };
+
+  componentDidMount() {
+    this._mounted = true;
+    this._check = () => {
+      const els = this._els || [];
+      const h = window.innerHeight || 800;
+      let next = null;
+      els.forEach((el) => {
+        if (!el.isConnected || this.state.visible[el.__revealId]) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < h - 60 && r.bottom > 0) {
+          next = next || {};
+          next[el.__revealId] = true;
+        }
+      });
+      if (next) this.setState((s) => ({ visible: { ...s.visible, ...next } }));
+    };
+    window.addEventListener("scroll", this._check, { passive: true });
+    window.addEventListener("resize", this._check);
+    this._check();
+    // fail-open: if nothing revealed shortly after mount, show everything
+    this._safety = setTimeout(() => {
+      const els = this._els || [];
+      if (els.some((el) => !this.state.visible[el.__revealId])) {
+        const all = {};
+        els.forEach((el) => { all[el.__revealId] = true; });
+        this.setState((s) => ({ visible: { ...s.visible, ...all } }));
+      }
+    }, 1200);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this._check);
+    window.removeEventListener("resize", this._check);
+    clearTimeout(this._safety);
+  }
+
+  registerEl(id, el) {
+    if (!el) return;
+    el.__revealId = id;
+    this._els = this._els || [];
+    if (this._els.indexOf(el) === -1) this._els.push(el);
+    if (this._mounted) requestAnimationFrame(() => this._check && this._check());
+  }
+
+  makeRef(id) {
+    this._refs = this._refs || {};
+    if (!this._refs[id]) this._refs[id] = (el) => this.registerEl(id, el);
+    return this._refs[id];
+  }
+
+  reveal(id, opts) {
+    opts = opts || {};
+    const distance = opts.distance ?? 22;
+    const duration = opts.duration ?? 0.7;
+    const delay = opts.delay ?? 0;
+    const visible = !!this.state.visible[id];
+    return {
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(" + distance + "px)",
+      transition: "opacity " + duration + "s cubic-bezier(0.16,1,0.3,1) " + delay + "s, transform " + duration + "s cubic-bezier(0.16,1,0.3,1) " + delay + "s",
+      willChange: "opacity, transform"
+    };
+  }
+
+  renderVals() {
+    const services = RAW_SERVICES.map((s, i) => ({
+      ...s,
+      ref: this.makeRef("svc" + i),
+      style: { ...this.reveal("svc" + i, { delay: i * 0.08 }), height: "100%" }
+    }));
+    const strengths = RAW_STRENGTHS.map((s, i) => ({
+      ...s,
+      ref: this.makeRef("str" + i),
+      style: this.reveal("str" + i, { delay: i * 0.1 })
+    }));
+    return {
+      services,
+      strengths,
+      heroRef: this.makeRef("hero"),
+      heroStyle: this.reveal("hero"),
+      servicesHeaderRef: this.makeRef("servicesHeader"),
+      servicesHeaderStyle: this.reveal("servicesHeader"),
+      whyLeftRef: this.makeRef("whyLeft"),
+      whyLeftStyle: this.reveal("whyLeft"),
+      contactRef: this.makeRef("contact"),
+      contactStyle: this.reveal("contact")
+    };
+  }
+}
+
+</script>
+</body>
+</html>
