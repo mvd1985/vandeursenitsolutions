@@ -28,17 +28,17 @@
   <header class="site-header">
     <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" class="header-logo" />
     <nav class="site-nav">
-      <a href="#services" class="nav-link">Services</a>
-      <a href="#why-us" class="nav-link">Why Us</a>
-      <a href="#contact" class="btn btn-primary header-cta">Get in touch</a>
+      <!--<a href="#services" class="nav-link">Services</a>
+      <a href="#why-us" class="nav-link">Why Us</a>-->
+      <a href="mailto:info@pclangstraat.nl" class="btn btn-primary header-cta">Get in touch</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div ref="{{ heroRef }}" style="{{ heroStyle }}">
+    <div ref="{{ heroRef }}" class="{{ heroClass }}">
       <div class="hero-inner">
         <span class="hero-badge">// IT solutions, engineered for scale</span>
-        <h1 class="hero-title">Software and systems built to run your business, not slow it down.</h1>
+        <h1 class="hero-title">Software and systems built to run and scale your business.</h1>
         <p class="hero-lead">We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary hero-cta">Start a project</a>
@@ -50,13 +50,13 @@
 
   <section id="services" class="services">
     <div class="container">
-      <div ref="{{ servicesHeaderRef }}" style="{{ servicesHeaderStyle }}">
+      <div ref="{{ servicesHeaderRef }}" class="{{ servicesHeaderClass }}">
         <span class="eyebrow eyebrow-center">Capabilities</span>
         <h2 class="section-title services-title">What we do</h2>
       </div>
       <div class="services-grid">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-          <div ref="{{ svc.ref }}" style="{{ svc.style }}">
+          <div ref="{{ svc.ref }}" class="{{ svc.cls }}">
             <div class="service-card">
               <div class="service-icon">
                 <div class="service-icon-dot"></div>
@@ -72,14 +72,14 @@
 
   <section id="why-us" class="why-us">
     <div class="why-grid">
-      <div ref="{{ whyLeftRef }}" style="{{ whyLeftStyle }}">
+      <div ref="{{ whyLeftRef }}" class="{{ whyLeftClass }}">
         <span class="eyebrow">Why us</span>
         <h2 class="section-title why-title">Built for how small businesses operate.</h2>
         <p class="why-text">No bloated enterprise contracts, no black-box vendors. We work directly with your team to build software you actually own, and stay on to support it as your business grows.</p>
       </div>
       <div class="strengths">
         <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
-          <div ref="{{ s.ref }}" style="{{ s.style }}">
+          <div ref="{{ s.ref }}" class="{{ s.cls }}">
             <div class="strength">
               <div class="strength-dot"></div>
               <div>
@@ -94,11 +94,11 @@
   </section>
 
   <section id="contact" class="contact">
-    <div ref="{{ contactRef }}" style="{{ contactStyle }}">
+    <div ref="{{ contactRef }}" class="{{ contactClass }}">
       <div class="contact-inner">
         <h2 class="contact-title">Ready to modernize your IT?</h2>
         <p class="contact-text">Tell us what you're working on and we'll get back to you with next steps.</p>
-        <a href="mailto:hello@vandeursenit.com" class="btn btn-primary contact-cta">Get in touch</a>
+        <a href="mailto:info@pclangstraat.nl" class="btn btn-primary contact-cta">Get in touch</a>
       </div>
     </div>
   </section>
@@ -177,42 +177,33 @@ class Component extends DCLogic {
     return this._refs[id];
   }
 
-  reveal(id, opts) {
-    opts = opts || {};
-    const distance = opts.distance ?? 22;
-    const duration = opts.duration ?? 0.7;
-    const delay = opts.delay ?? 0;
-    const visible = !!this.state.visible[id];
-    return {
-      opacity: visible ? 1 : 0,
-      transform: visible ? "translateY(0)" : "translateY(" + distance + "px)",
-      transition: "opacity " + duration + "s cubic-bezier(0.16,1,0.3,1) " + delay + "s, transform " + duration + "s cubic-bezier(0.16,1,0.3,1) " + delay + "s",
-      willChange: "opacity, transform"
-    };
+  // Reveal animation styles live in style.css (.reveal / .is-visible)
+  reveal(id) {
+    return this.state.visible[id] ? "reveal is-visible" : "reveal";
   }
 
   renderVals() {
     const services = RAW_SERVICES.map((s, i) => ({
       ...s,
       ref: this.makeRef("svc" + i),
-      style: { ...this.reveal("svc" + i, { delay: i * 0.08 }), height: "100%" }
+      cls: this.reveal("svc" + i)
     }));
     const strengths = RAW_STRENGTHS.map((s, i) => ({
       ...s,
       ref: this.makeRef("str" + i),
-      style: this.reveal("str" + i, { delay: i * 0.1 })
+      cls: this.reveal("str" + i)
     }));
     return {
       services,
       strengths,
       heroRef: this.makeRef("hero"),
-      heroStyle: this.reveal("hero"),
+      heroClass: this.reveal("hero"),
       servicesHeaderRef: this.makeRef("servicesHeader"),
-      servicesHeaderStyle: this.reveal("servicesHeader"),
+      servicesHeaderClass: this.reveal("servicesHeader"),
       whyLeftRef: this.makeRef("whyLeft"),
-      whyLeftStyle: this.reveal("whyLeft"),
+      whyLeftClass: this.reveal("whyLeft"),
       contactRef: this.makeRef("contact"),
-      contactStyle: this.reveal("contact")
+      contactClass: this.reveal("contact")
     };
   }
 }
