@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <x-dc>
@@ -18,60 +19,50 @@
 </template>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<style>
-  body { margin: 0; background: oklch(14% 0.015 260); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-  a { color: oklch(75% 0.16 220); text-decoration: none; }
-  a:hover { color: oklch(85% 0.16 220); }
-  @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:0.9; } }
-  @keyframes drift { 0% { background-position: 0 0; } 100% { background-position: 200px 200px; } }
-</style>
 </helmet>
 
-<div style="display:flex; flex-direction:column; min-height:100vh; color:oklch(94% 0.005 260); position:relative; overflow-x:hidden; background:
-  radial-gradient(circle at 15% 0%, oklch(30% 0.08 250 / 0.5), transparent 45%),
-  radial-gradient(circle at 90% 20%, oklch(45% 0.14 200 / 0.25), transparent 40%),
-  oklch(14% 0.015 260);">
+<div class="page">
 
-  <div style="position:absolute; inset:0; background-image:linear-gradient(oklch(100% 0 0 / 0.1) 1px, transparent 1px), linear-gradient(90deg, oklch(100% 0 0 / 0.1) 1px, transparent 1px); background-size:64px 64px; pointer-events:none; mask-image:linear-gradient(to bottom, black, transparent 70%); animation:drift 24s linear infinite;"></div>
+  <div class="grid-bg"></div>
 
-  <header style="position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:14px clamp(16px,4vw,64px); gap:16px; flex-wrap:wrap; background:oklch(14% 0.015 260 / 0.7); backdrop-filter:blur(14px); border-bottom:1px solid oklch(100% 0 0 / 0.08);">
-    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" style="height:clamp(34px,7vw,52px); width:auto; display:block;" />
-    <nav style="display:flex; align-items:center; flex-wrap:wrap; gap:clamp(14px,3vw,36px);">
-      <a href="#services" style="font-size:15px; font-weight:500; color:oklch(94% 0.005 260);" style-hover="color:oklch(78% 0.16 220);">Services</a>
-      <a href="#why-us" style="font-size:15px; font-weight:500; color:oklch(94% 0.005 260);" style-hover="color:oklch(78% 0.16 220);">Why Us</a>
-      <a href="#contact" style="display:inline-flex; align-items:center; padding:10px 24px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:15px; font-weight:600; box-shadow:0 0 24px oklch(78% 0.16 220 / 0.5);" style-hover="box-shadow:0 0 36px oklch(78% 0.16 220 / 0.75);">Get in touch</a>
+  <header class="site-header">
+    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" class="header-logo" />
+    <nav class="site-nav">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#why-us" class="nav-link">Why Us</a>
+      <a href="#contact" class="btn btn-primary header-cta">Get in touch</a>
     </nav>
   </header>
 
-  <section style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px; padding:clamp(72px,12vw,140px) clamp(20px,5vw,24px) clamp(64px,10vw,120px); max-width:880px; margin:0 auto; position:relative; z-index:1;">
+  <section class="hero">
     <div ref="{{ heroRef }}" style="{{ heroStyle }}">
-      <div style="display:flex; flex-direction:column; align-items:center; gap:26px;">
-        <span style="font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); padding:8px 16px; border:1px solid oklch(78% 0.16 220 / 0.35); border-radius:100px; background:oklch(78% 0.16 220 / 0.08);">// IT solutions, engineered for scale</span>
-        <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(32px,6.4vw,62px); line-height:1.08; font-weight:700; margin:0; letter-spacing:-0.01em; background:linear-gradient(180deg, oklch(98% 0.005 260), oklch(75% 0.02 260)); -webkit-background-clip:text; background-clip:text; color:transparent;">Software and systems built to run your business, not slow it down.</h1>
-        <p style="font-size:clamp(16px,2.1vw,19px); line-height:1.6; color:oklch(72% 0.01 260); margin:0; max-width:620px;">We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.</p>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:8px;">
-          <a href="#contact" style="display:inline-flex; align-items:center; padding:15px 30px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:16px; font-weight:600; box-shadow:0 0 30px oklch(78% 0.16 220 / 0.5);" style-hover="box-shadow:0 0 44px oklch(78% 0.16 220 / 0.8);">Start a project</a>
-          <a href="#services" style="display:inline-flex; align-items:center; padding:15px 30px; border-radius:8px; background:oklch(20% 0.02 260); border:1px solid oklch(100% 0 0 / 0.12); color:oklch(94% 0.005 260); font-size:16px; font-weight:600;" style-hover="border-color:oklch(78% 0.16 220); color:oklch(78% 0.16 220);">See what we do</a>
+      <div class="hero-inner">
+        <span class="hero-badge">// IT solutions, engineered for scale</span>
+        <h1 class="hero-title">Software and systems built to run your business, not slow it down.</h1>
+        <p class="hero-lead">We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary hero-cta">Start a project</a>
+          <a href="#services" class="btn btn-secondary">See what we do</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" style="padding:clamp(56px,9vw,90px) clamp(20px,5vw,64px) clamp(64px,10vw,110px); position:relative; z-index:1;">
-    <div style="max-width:1160px; margin:0 auto;">
+  <section id="services" class="services">
+    <div class="container">
       <div ref="{{ servicesHeaderRef }}" style="{{ servicesHeaderStyle }}">
-        <span style="display:block; text-align:center; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); margin-bottom:14px;">Capabilities</span>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,4.6vw,36px); font-weight:700; margin:0 0 clamp(34px,6vw,56px); text-align:center;">What we do</h2>
+        <span class="eyebrow eyebrow-center">Capabilities</span>
+        <h2 class="section-title services-title">What we do</h2>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:clamp(16px,2.4vw,24px); align-items:stretch; max-width:860px; margin:0 auto;">
+      <div class="services-grid">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
           <div ref="{{ svc.ref }}" style="{{ svc.style }}">
-            <div style="height:100%; box-sizing:border-box; background:oklch(20% 0.02 260 / 0.6); backdrop-filter:blur(6px); border-radius:16px; padding:clamp(22px,4vw,32px); display:flex; flex-direction:column; gap:16px; border:1px solid oklch(100% 0 0 / 0.1); transition:border-color 0.2s;" style-hover="border-color:oklch(78% 0.16 220 / 0.6);">
-              <div style="width:44px; height:44px; border-radius:10px; background:oklch(78% 0.16 220 / 0.15); border:1px solid oklch(78% 0.16 220 / 0.4); display:flex; align-items:center; justify-content:center;">
-                <div style="width:14px; height:14px; border-radius:3px; background:oklch(78% 0.16 220); box-shadow:0 0 12px oklch(78% 0.16 220 / 0.8);"></div>
+            <div class="service-card">
+              <div class="service-icon">
+                <div class="service-icon-dot"></div>
               </div>
-              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; margin:0;">{{ svc.title }}</h3>
-              <p style="font-size:15px; line-height:1.6; color:oklch(70% 0.01 260); margin:0;">{{ svc.desc }}</p>
+              <h3 class="service-title">{{ svc.title }}</h3>
+              <p class="card-text">{{ svc.desc }}</p>
             </div>
           </div>
         </sc-for>
@@ -79,21 +70,21 @@
     </div>
   </section>
 
-  <section id="why-us" style="padding:clamp(64px,10vw,110px) clamp(20px,5vw,64px); max-width:1160px; margin:0 auto; width:100%; box-sizing:border-box; position:relative; z-index:1;">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(36px,6vw,80px); align-items:start;">
+  <section id="why-us" class="why-us">
+    <div class="why-grid">
       <div ref="{{ whyLeftRef }}" style="{{ whyLeftStyle }}">
-        <span style="display:block; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:oklch(78% 0.16 220); margin-bottom:14px;">Why us</span>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,4.6vw,36px); font-weight:700; margin:0 0 16px;">Built for how small businesses operate.</h2>
-        <p style="font-size:17px; line-height:1.7; color:oklch(70% 0.01 260); margin:0;">No bloated enterprise contracts, no black-box vendors. We work directly with your team to build software you actually own, and stay on to support it as your business grows.</p>
+        <span class="eyebrow">Why us</span>
+        <h2 class="section-title why-title">Built for how small businesses operate.</h2>
+        <p class="why-text">No bloated enterprise contracts, no black-box vendors. We work directly with your team to build software you actually own, and stay on to support it as your business grows.</p>
       </div>
-      <div style="display:flex; flex-direction:column; gap:clamp(18px,3vw,28px);">
+      <div class="strengths">
         <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
           <div ref="{{ s.ref }}" style="{{ s.style }}">
-            <div style="display:flex; gap:18px; align-items:flex-start; padding:20px; border-radius:12px; border:1px solid oklch(100% 0 0 / 0.08); background:oklch(20% 0.02 260 / 0.4);">
-              <div style="min-width:8px; height:8px; margin-top:8px; border-radius:50%; background:oklch(78% 0.16 220); box-shadow:0 0 10px oklch(78% 0.16 220 / 0.9); animation:pulse 2.4s ease-in-out infinite;"></div>
+            <div class="strength">
+              <div class="strength-dot"></div>
               <div>
-                <h4 style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; margin:0 0 4px;">{{ s.title }}</h4>
-                <p style="font-size:15px; line-height:1.6; color:oklch(70% 0.01 260); margin:0;">{{ s.desc }}</p>
+                <h4 class="strength-title">{{ s.title }}</h4>
+                <p class="card-text">{{ s.desc }}</p>
               </div>
             </div>
           </div>
@@ -102,19 +93,19 @@
     </div>
   </section>
 
-  <section id="contact" style="background:linear-gradient(180deg, oklch(20% 0.03 250), oklch(15% 0.02 260)); border-top:1px solid oklch(100% 0 0 / 0.08); padding:clamp(64px,10vw,100px) clamp(20px,5vw,64px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; position:relative; z-index:1;">
+  <section id="contact" class="contact">
     <div ref="{{ contactRef }}" style="{{ contactStyle }}">
-      <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px,5vw,38px); font-weight:700; margin:0;">Ready to modernize your IT?</h2>
-        <p style="font-size:17px; color:oklch(75% 0.01 260); margin:0; max-width:520px;">Tell us what you're working on and we'll get back to you with next steps.</p>
-        <a href="mailto:hello@vandeursenit.com" style="margin-top:8px; display:inline-flex; align-items:center; padding:15px 34px; border-radius:8px; background:oklch(78% 0.16 220); color:oklch(14% 0.015 260); font-size:16px; font-weight:600; box-shadow:0 0 34px oklch(78% 0.16 220 / 0.55);" style-hover="box-shadow:0 0 48px oklch(78% 0.16 220 / 0.85);">Get in touch</a>
+      <div class="contact-inner">
+        <h2 class="contact-title">Ready to modernize your IT?</h2>
+        <p class="contact-text">Tell us what you're working on and we'll get back to you with next steps.</p>
+        <a href="mailto:hello@vandeursenit.com" class="btn btn-primary contact-cta">Get in touch</a>
       </div>
     </div>
   </section>
 
-  <footer style="padding:clamp(24px,5vw,36px) clamp(20px,5vw,64px); display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; border-top:1px solid oklch(100% 0 0 / 0.08); position:relative; z-index:1;">
-    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" style="height:32px; width:auto; display:block; opacity:0.85;" />
-    <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:oklch(60% 0.01 260);">© 2026 Van Deursen IT Solutions</span>
+  <footer class="site-footer">
+    <img src="assets/logo-onDark.png" alt="Van Deursen IT Solutions" width="634" height="119" class="footer-logo" />
+    <span class="footer-copy">© 2026 Van Deursen IT Solutions</span>
   </footer>
 
 </div>
