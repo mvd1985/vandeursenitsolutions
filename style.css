@@ -33,13 +33,14 @@ a:hover { color: oklch(85% 0.16 220); }
 .container { max-width: 1160px; margin: 0 auto; }
 
 /* ---------- Scroll reveal (toggled by the page script) ---------- */
-.reveal {
+/* Scoped to .js so content stays visible when JavaScript is off */
+.js .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
   will-change: opacity, transform;
 }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 /* Staggered delays for list items */
 .services-grid > .reveal { height: 100%; }

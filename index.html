@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
-  // Cachebuster: current time as version, so the latest CSS/JS is always fetched
-  var v = Date.now();
-  document.write('<script src="./support.js?v=' + v + '"><\/script>');
-  document.write('<link rel="stylesheet" href="./style.css?v=' + v + '">');
-</script>
+<title>Van Deursen IT Solutions</title>
+<meta name="description" content="We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<!-- Bump ?v= when style.css changes so browsers fetch the new version -->
+<link rel="stylesheet" href="style.css?v=2">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<template id="__bundler_thumbnail" data-bg-color="#0e1420">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#141a2b"/>
-    <circle cx="600" cy="400" r="120" fill="none" stroke="#6fb7e6" stroke-width="14"/>
-    <rect x="520" y="360" width="160" height="80" rx="12" fill="#6fb7e6"/>
-  </svg>
-</template>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-</helmet>
 
 <div class="page">
 
@@ -34,18 +24,18 @@
     <nav class="site-nav">
       <!--<a href="#services" class="nav-link">Services</a>
       <a href="#why-us" class="nav-link">Why Us</a>-->
-      <a href="mailto:info@pclangstraat.nl" class="btn btn-primary header-cta">Get in touch</a>
+      <a href="mailto:info@vandeursenitsolutions.nl" class="btn btn-primary header-cta">Get in touch</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div ref="{{ heroRef }}" class="{{ heroClass }}">
+    <div class="reveal">
       <div class="hero-inner">
         <span class="hero-badge">// IT solutions, engineered for scale</span>
         <h1 class="hero-title">Software and systems built to run and scale your business.</h1>
         <p class="hero-lead">We design, build, and maintain custom software, web applications, and automation that fit the way small businesses actually work.</p>
         <div class="hero-actions">
-          <a href="mailto:info@pclangstraat.nl" class="btn btn-primary hero-cta">Start a project</a>
+          <a href="mailto:info@vandeursenitsolutions.nl" class="btn btn-primary hero-cta">Start a project</a>
           <a href="#services" class="btn btn-secondary">See what we do</a>
         </div>
       </div>
@@ -54,55 +44,88 @@
 
   <section id="services" class="services">
     <div class="container">
-      <div ref="{{ servicesHeaderRef }}" class="{{ servicesHeaderClass }}">
+      <div class="reveal">
         <span class="eyebrow eyebrow-center">Capabilities</span>
         <h2 class="section-title services-title">What we do</h2>
       </div>
       <div class="services-grid">
-        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-          <div ref="{{ svc.ref }}" class="{{ svc.cls }}">
-            <div class="service-card">
-              <div class="service-icon">
-                <div class="service-icon-dot"></div>
-              </div>
-              <h3 class="service-title">{{ svc.title }}</h3>
-              <p class="card-text">{{ svc.desc }}</p>
-            </div>
+        <div class="reveal">
+          <div class="service-card">
+            <div class="service-icon"><div class="service-icon-dot"></div></div>
+            <h3 class="service-title">Custom Software</h3>
+            <p class="card-text">Bespoke applications designed and built around your specific workflows.</p>
           </div>
-        </sc-for>
+        </div>
+        <div class="reveal">
+          <div class="service-card">
+            <div class="service-icon"><div class="service-icon-dot"></div></div>
+            <h3 class="service-title">Web Applications &amp; Websites</h3>
+            <p class="card-text">From marketing sites to full web apps, built to load fast and scale.</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="service-card">
+            <div class="service-icon"><div class="service-icon-dot"></div></div>
+            <h3 class="service-title">Business Process Automation</h3>
+            <p class="card-text">We identify manual, repetitive work and automate it end to end.</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="service-card">
+            <div class="service-icon"><div class="service-icon-dot"></div></div>
+            <h3 class="service-title">IT Consulting &amp; Support</h3>
+            <p class="card-text">Practical advice on architecture, tooling, and technology decisions, plus ongoing upkeep.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="why-us" class="why-us">
     <div class="why-grid">
-      <div ref="{{ whyLeftRef }}" class="{{ whyLeftClass }}">
+      <div class="reveal">
         <span class="eyebrow">Why us</span>
         <h2 class="section-title why-title">Built for how small businesses operate.</h2>
         <p class="why-text">No bloated enterprise contracts, no black-box vendors. We work directly with your team to build software you actually own, and stay on to support it as your business grows.</p>
       </div>
       <div class="strengths">
-        <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
-          <div ref="{{ s.ref }}" class="{{ s.cls }}">
-            <div class="strength">
-              <div class="strength-dot"></div>
-              <div>
-                <h4 class="strength-title">{{ s.title }}</h4>
-                <p class="card-text">{{ s.desc }}</p>
-              </div>
+        <div class="reveal">
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <div>
+              <h4 class="strength-title">Direct access to the people building your software</h4>
+              <p class="card-text">No account managers relaying messages, you talk to the engineers.</p>
             </div>
           </div>
-        </sc-for>
+        </div>
+        <div class="reveal">
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <div>
+              <h4 class="strength-title">Solutions sized to your business</h4>
+              <p class="card-text">We scope for what you need now, and design so it can grow later.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <div>
+              <h4 class="strength-title">Support that doesn't end at launch</h4>
+              <p class="card-text">We stay on to maintain, monitor, and improve what we build.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <div ref="{{ contactRef }}" class="{{ contactClass }}">
+    <div class="reveal">
       <div class="contact-inner">
         <h2 class="contact-title">Ready to modernize your IT?</h2>
         <p class="contact-text">Tell us what you're working on and we'll get back to you with next steps.</p>
-        <a href="mailto:info@pclangstraat.nl" class="btn btn-primary contact-cta">Get in touch</a>
+        <a href="mailto:info@vandeursenitsolutions.nl" class="btn btn-primary contact-cta">Get in touch</a>
       </div>
     </div>
   </section>
@@ -114,104 +137,23 @@
 
 </div>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-const RAW_SERVICES = [
-  { title: "Custom Software", desc: "Bespoke applications designed and built around your specific workflows." },
-  { title: "Web Applications & Websites", desc: "From marketing sites to full web apps, built to load fast and scale." },
-  { title: "Business Process Automation", desc: "We identify manual, repetitive work and automate it end to end." },
-  { title: "IT Consulting & Support", desc: "Practical advice on architecture, tooling, and technology decisions, plus ongoing upkeep, monitoring, and fixes so systems keep running." }
-];
-const RAW_STRENGTHS = [
-  { title: "Direct access to the people building your software", desc: "No account managers relaying messages, you talk to the engineers." },
-  { title: "Solutions sized to your business", desc: "We scope for what you need now, and design so it can grow later." },
-  { title: "Support that doesn't end at launch", desc: "We stay on to maintain, monitor, and improve what we build." }
-];
-
-class Component extends DCLogic {
-  state = { visible: {} };
-
-  componentDidMount() {
-    this._mounted = true;
-    this._check = () => {
-      const els = this._els || [];
-      const h = window.innerHeight || 800;
-      let next = null;
-      els.forEach((el) => {
-        if (!el.isConnected || this.state.visible[el.__revealId]) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < h - 60 && r.bottom > 0) {
-          next = next || {};
-          next[el.__revealId] = true;
-        }
+<script>
+  // Scroll reveal: fade each .reveal in once it comes into view (styles in style.css)
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
       });
-      if (next) this.setState((s) => ({ visible: { ...s.visible, ...next } }));
-    };
-    window.addEventListener("scroll", this._check, { passive: true });
-    window.addEventListener("resize", this._check);
-    this._check();
-    // fail-open: if nothing revealed shortly after mount, show everything
-    this._safety = setTimeout(() => {
-      const els = this._els || [];
-      if (els.some((el) => !this.state.visible[el.__revealId])) {
-        const all = {};
-        els.forEach((el) => { all[el.__revealId] = true; });
-        this.setState((s) => ({ visible: { ...s.visible, ...all } }));
-      }
-    }, 1200);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this._check);
-    window.removeEventListener("resize", this._check);
-    clearTimeout(this._safety);
-  }
-
-  registerEl(id, el) {
-    if (!el) return;
-    el.__revealId = id;
-    this._els = this._els || [];
-    if (this._els.indexOf(el) === -1) this._els.push(el);
-    if (this._mounted) requestAnimationFrame(() => this._check && this._check());
-  }
-
-  makeRef(id) {
-    this._refs = this._refs || {};
-    if (!this._refs[id]) this._refs[id] = (el) => this.registerEl(id, el);
-    return this._refs[id];
-  }
-
-  // Reveal animation styles live in style.css (.reveal / .is-visible)
-  reveal(id) {
-    return this.state.visible[id] ? "reveal is-visible" : "reveal";
-  }
-
-  renderVals() {
-    const services = RAW_SERVICES.map((s, i) => ({
-      ...s,
-      ref: this.makeRef("svc" + i),
-      cls: this.reveal("svc" + i)
-    }));
-    const strengths = RAW_STRENGTHS.map((s, i) => ({
-      ...s,
-      ref: this.makeRef("str" + i),
-      cls: this.reveal("str" + i)
-    }));
-    return {
-      services,
-      strengths,
-      heroRef: this.makeRef("hero"),
-      heroClass: this.reveal("hero"),
-      servicesHeaderRef: this.makeRef("servicesHeader"),
-      servicesHeaderClass: this.reveal("servicesHeader"),
-      whyLeftRef: this.makeRef("whyLeft"),
-      whyLeftClass: this.reveal("whyLeft"),
-      contactRef: this.makeRef("contact"),
-      contactClass: this.reveal("contact")
-    };
-  }
-}
-
+    }, { rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
 </script>
 </body>
 </html>
