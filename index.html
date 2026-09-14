@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<!-- Bump ?v= when style.css changes so browsers fetch the new version -->
 <link rel="stylesheet" href="style.css?v=2">
 <script>document.documentElement.classList.add('js');</script>
+<script src="script.js?v=2" defer></script>
 </head>
 <body>
 
@@ -137,23 +137,5 @@
 
 </div>
 
-<script>
-  // Scroll reveal: fade each .reveal in once it comes into view (styles in style.css)
-  (function () {
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('is-visible'); });
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('is-visible');
-        io.unobserve(e.target);
-      });
-    }, { rootMargin: '0px 0px -60px 0px' });
-    els.forEach(function (el) { io.observe(el); });
-  })();
-</script>
 </body>
 </html>
