@@ -110,6 +110,21 @@ a:hover { color: oklch(85% 0.16 220); }
 .header-cta { padding: 10px clamp(14px,4vw,24px); font-size: 15px; white-space: nowrap;box-shadow: 0 0 24px oklch(78% 0.16 220 / 0.5); }
 .header-cta:hover { box-shadow: 0 0 36px oklch(78% 0.16 220 / 0.75); }
 
+/* Language switch (NL / EN), top right of the header */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: oklch(45% 0.01 260);
+}
+.lang-switch a { color: oklch(70% 0.01 260); }
+.lang-switch a:hover { color: oklch(85% 0.16 220); }
+.lang-switch a[aria-current="page"] { color: oklch(78% 0.16 220); }
+
 /* ---------- Hero ---------- */
 .hero {
   display: flex;
