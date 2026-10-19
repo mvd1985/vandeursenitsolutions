@@ -1,7 +1,7 @@
 /* ---------- Base ---------- */
 body { margin: 0; background: oklch(14% 0.015 260); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-a { color: oklch(75% 0.16 220); text-decoration: none; }
-a:hover { color: oklch(85% 0.16 220); }
+a { color: oklch(74% 0.17 240); text-decoration: none; }
+a:hover { color: oklch(84% 0.14 235); }
 
 @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:0.9; } }
 @keyframes drift { 0% { background-position: 0 0; } 100% { background-position: 200px 200px; } }
@@ -15,8 +15,8 @@ a:hover { color: oklch(85% 0.16 220); }
   position: relative;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 15% 0%, oklch(30% 0.08 250 / 0.5), transparent 45%),
-    radial-gradient(circle at 90% 20%, oklch(45% 0.14 200 / 0.25), transparent 40%),
+    radial-gradient(circle at 15% 0%, oklch(32% 0.14 262 / 0.5), transparent 45%),
+    radial-gradient(circle at 90% 20%, oklch(55% 0.19 245 / 0.25), transparent 40%),
     oklch(14% 0.015 260);
 }
 
@@ -57,7 +57,7 @@ a:hover { color: oklch(85% 0.16 220); }
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: oklch(78% 0.16 220);
+  color: oklch(72% 0.19 245);
   margin-bottom: 14px;
 }
 .eyebrow-center { text-align: center; }
@@ -74,7 +74,7 @@ a:hover { color: oklch(85% 0.16 220); }
   font-weight: 600;
 }
 .btn-primary,
-.btn-primary:hover { background: oklch(78% 0.16 220); color: oklch(14% 0.015 260); }
+.btn-primary:hover { background: linear-gradient(180deg, oklch(76% 0.16 235), oklch(55% 0.25 263)); color: #fff; }
 
 .btn-secondary {
   padding: 15px 30px;
@@ -83,7 +83,7 @@ a:hover { color: oklch(85% 0.16 220); }
   color: oklch(94% 0.005 260);
   font-size: 16px;
 }
-.btn-secondary:hover { border-color: oklch(78% 0.16 220); color: oklch(78% 0.16 220); }
+.btn-secondary:hover { border-color: oklch(72% 0.19 245); color: oklch(72% 0.19 245); }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -105,10 +105,10 @@ a:hover { color: oklch(85% 0.16 220); }
 
 .site-nav { display: flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: clamp(14px,3vw,36px); }
 .nav-link { font-size: 15px; font-weight: 500; color: oklch(94% 0.005 260); }
-.nav-link:hover { color: oklch(78% 0.16 220); }
+.nav-link:hover { color: oklch(72% 0.19 245); }
 
-.header-cta { padding: 10px clamp(14px,4vw,24px); font-size: 15px; white-space: nowrap;box-shadow: 0 0 24px oklch(78% 0.16 220 / 0.5); }
-.header-cta:hover { box-shadow: 0 0 36px oklch(78% 0.16 220 / 0.75); }
+.header-cta { padding: 10px clamp(14px,4vw,24px); font-size: 15px; white-space: nowrap;box-shadow: 0 0 24px oklch(72% 0.19 245 / 0.5); }
+.header-cta:hover { box-shadow: 0 0 36px oklch(72% 0.19 245 / 0.75); }
 
 /* Language switch (NL / EN), top right of the header */
 .lang-switch {
@@ -122,8 +122,8 @@ a:hover { color: oklch(85% 0.16 220); }
   color: oklch(45% 0.01 260);
 }
 .lang-switch a { color: oklch(70% 0.01 260); }
-.lang-switch a:hover { color: oklch(85% 0.16 220); }
-.lang-switch a[aria-current="page"] { color: oklch(78% 0.16 220); }
+.lang-switch a:hover { color: oklch(84% 0.14 235); }
+.lang-switch a[aria-current="page"] { color: oklch(72% 0.19 245); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -146,11 +146,11 @@ a:hover { color: oklch(85% 0.16 220); }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: oklch(78% 0.16 220);
+  color: oklch(72% 0.19 245);
   padding: 8px 16px;
-  border: 1px solid oklch(78% 0.16 220 / 0.35);
+  border: 1px solid oklch(72% 0.19 245 / 0.35);
   border-radius: 100px;
-  background: oklch(78% 0.16 220 / 0.08);
+  background: oklch(72% 0.19 245 / 0.08);
 }
 
 .hero-title {
@@ -170,8 +170,8 @@ a:hover { color: oklch(85% 0.16 220); }
 
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 8px; }
 
-.hero-cta { padding: 15px 30px; font-size: 16px; box-shadow: 0 0 30px oklch(78% 0.16 220 / 0.5); }
-.hero-cta:hover { box-shadow: 0 0 44px oklch(78% 0.16 220 / 0.8); }
+.hero-cta { padding: 15px 30px; font-size: 16px; box-shadow: 0 0 30px oklch(72% 0.19 245 / 0.5); }
+.hero-cta:hover { box-shadow: 0 0 44px oklch(72% 0.19 245 / 0.8); }
 
 /* ---------- Services ---------- */
 .services { padding: clamp(56px,9vw,90px) clamp(20px,5vw,64px) clamp(64px,10vw,110px); position: relative; z-index: 1; }
@@ -199,19 +199,19 @@ a:hover { color: oklch(85% 0.16 220); }
   border: 1px solid oklch(100% 0 0 / 0.1);
   transition: border-color 0.2s;
 }
-.service-card:hover { border-color: oklch(78% 0.16 220 / 0.6); }
+.service-card:hover { border-color: oklch(72% 0.19 245 / 0.6); }
 
 .service-icon {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: oklch(78% 0.16 220 / 0.15);
-  border: 1px solid oklch(78% 0.16 220 / 0.4);
+  background: oklch(72% 0.19 245 / 0.15);
+  border: 1px solid oklch(72% 0.19 245 / 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.service-icon-dot { width: 14px; height: 14px; border-radius: 3px; background: oklch(78% 0.16 220); box-shadow: 0 0 12px oklch(78% 0.16 220 / 0.8); }
+.service-icon-dot { width: 14px; height: 14px; border-radius: 3px; background: oklch(72% 0.19 245); box-shadow: 0 0 12px oklch(72% 0.19 245 / 0.8); }
 
 .service-title { font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0; }
 
@@ -244,8 +244,8 @@ a:hover { color: oklch(85% 0.16 220); }
   height: 8px;
   margin-top: 8px;
   border-radius: 50%;
-  background: oklch(78% 0.16 220);
-  box-shadow: 0 0 10px oklch(78% 0.16 220 / 0.9);
+  background: oklch(72% 0.19 245);
+  box-shadow: 0 0 10px oklch(72% 0.19 245 / 0.9);
   animation: pulse 2.4s ease-in-out infinite;
 }
 .strength-title { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin: 0 0 4px; }
@@ -267,8 +267,8 @@ a:hover { color: oklch(85% 0.16 220); }
 .contact-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px,5vw,38px); font-weight: 700; margin: 0; }
 .contact-text { font-size: 17px; color: oklch(75% 0.01 260); margin: 0; max-width: 520px; }
 
-.contact-cta { margin-top: 8px; padding: 15px 34px; font-size: 16px; box-shadow: 0 0 34px oklch(78% 0.16 220 / 0.55); }
-.contact-cta:hover { box-shadow: 0 0 48px oklch(78% 0.16 220 / 0.85); }
+.contact-cta { margin-top: 8px; padding: 15px 34px; font-size: 16px; box-shadow: 0 0 34px oklch(72% 0.19 245 / 0.55); }
+.contact-cta:hover { box-shadow: 0 0 48px oklch(72% 0.19 245 / 0.85); }
 
 /* ---------- Footer ---------- */
 .site-footer {
