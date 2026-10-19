@@ -13,7 +13,7 @@ a:hover { color: oklch(84% 0.14 235); }
   min-height: 100vh;
   color: oklch(94% 0.005 260);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 15% 0%, oklch(32% 0.14 262 / 0.5), transparent 45%),
     radial-gradient(circle at 90% 20%, oklch(55% 0.19 245 / 0.25), transparent 40%),
